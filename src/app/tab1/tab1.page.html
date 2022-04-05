@@ -1,22 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    
-     <center><img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
-  
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
 
-    </ion-toolbar>
-  </ion-header>
+   <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Accueil</ion-item>
+          <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
+          <ion-item>Espace entreprises et partenaires</ion-item>
+          <ion-item>S'engager au RSMA</ion-item>
+          <ion-item>Nous contacter</ion-item>
+        </ion-list>
+        <ion-router-outlet id="main"></ion-router-outlet>
+      </ion-content>
+    </ion-menu>
+    
+     <center><img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
 
+<ion-button fill="clear"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
 <img src="https://www.rsmaguyane.fr/images/silde_1/Sans_titre17.jpg">
 <ion-button expand="block">LE RSMA GUYANE</ion-button>
 <ion-button href="/formations" expand="block">NOS FORMATIONS</ion-button>
-<ion-button expand="block">NOUS SITUER</ion-button>
+<ion-button href="/contact"expand="block">NOUS SITUER</ion-button>
 
 <img src="https://www.rsmaguyane.fr/images/logos/rsma-guyane-europe.JPG">
 
