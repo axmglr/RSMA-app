@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'fiche-formation',
     loadChildren: () => import('./fiche-formation/fiche-formation.module').then( m => m.FicheFormationPageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./profil/profil.module').then( m => m.ProfilPageModule)
   }
 
 ];
