@@ -1,8 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profil</ion-title>
-  </ion-toolbar>
+
+  <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Accueil</ion-item>
+        <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
+        <ion-item>Espace entreprises et partenaires</ion-item>
+        <ion-item>S'engager au RSMA</ion-item>
+        <ion-item>Nous contacter</ion-item>
+      </ion-list>
+      <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-content>
+  </ion-menu>
+
+  <center><img id="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
+
+
+  <ion-card>
+  <ion-card-header>
+    <center><ion-card-subtitle>MON PROFIL</ion-card-subtitle></center>
+     <center><img id="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs-PGo1B0hrjWowbqSwAeIhX2_5-K_Z16S0w7N3pByi47-_4TWBLRZ01mLjdsMrNfjhJ8&usqp=CAU"></center>
+   </ion-card-header>
+   <ion-card-content>
+     Nom: Magloire <br>
+     Prénom: Axel <br>
+     Ajouter un CV: <br>
+     Ajouter une lettre de motivation: <br>
+     Statut: Disponible/Indisponible <br>
+     Fin de contrat: 15 juin <br>
+   </ion-card-content>
+  </ion-card>
+
 </ion-header>
+
+
 
 <ion-content>
 
