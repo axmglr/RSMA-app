@@ -1,27 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <center><img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header>
+    <ion-button href="/tabs/tab1" fill="clear"><ion-icon color="white" name="return-up-back-outline"></ion-icon></ion-button>
+    <center><img  id ="rsma" src="/assets/LOGO_BASELINE_RSMA-removebg-preview.png"></center>
 
+
+
+
+
+
+
+  
+<ion-card fill="clear">
+  <ion-card-header>
+ 
   <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png"></center>
-<center><ion-title size="large">Se connecter</ion-title></center>
+<center><ion-card-title>Se connecter</ion-card-title></center>
+</ion-card-header> 
+<ion-card-content>
+
+ 
 <ion-item>
-  <ion-label position="floating">Email</ion-label>
+  <ion-label>Email :</ion-label>
   <ion-input></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position="floating" >Mot de passe</ion-label>
+  <ion-label>Mot de passe :</ion-label>
   <ion-input type="password"></ion-input>
 </ion-item>
 
-<ion-button>Connexion</ion-button>
-<ion-button>Inscription</ion-button>
+<center><ion-button>Connexion</ion-button><br>
+Inscription</center>
+</ion-card-content>
+</ion-card>
 </ion-content>
