@@ -8,11 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  constructor(private menu: MenuController) {
-
-  
-
-}
+  constructor(private menu: MenuController) {}
 
 openFirst() {
     this.menu.enable(true, 'first');
