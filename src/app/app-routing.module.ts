@@ -15,10 +15,6 @@ const routes: Routes = [
     loadChildren: () => import('./formations/formations.module').then( m => m.FormationsPageModule)
   },
   {
-    path: 'accueil',
-    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
-  },
-  {
     path: 'fiche-formation',
     loadChildren: () => import('./fiche-formation/fiche-formation.module').then( m => m.FicheFormationPageModule)
   },
