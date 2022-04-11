@@ -1,6 +1,9 @@
 <ion-content><ion-header>
 
-  <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
+  <ion-grid>
+    <ion-row>
+      <ion-col> 
+
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-header>
       <ion-toolbar color="primary">
@@ -19,8 +22,17 @@
     </ion-content>
   </ion-menu>
 
-  <center><img id="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
 
+<ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
+</ion-col>
+
+  <ion-col>
+  <center><img id="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
+  </ion-col>
+
+  <ion-col></ion-col>
+</ion-row>
+  </ion-grid>
 </ion-header>
 
 <center><ion-text><h1>Profil du volontaire</h1></ion-text></center>
@@ -32,9 +44,21 @@
     MAGLOIRE Axel
   </h2>
 </ion-text>
-<ion-text><p>Développeur web : Fin de formation le 3 août 2022</p></ion-text>
+<ion-text>Développeur web : Fin de formation le 3 août 2022</ion-text>
 </center>
 
+
+<ion-grid>
+  <ion-row>
+    <ion-col> 
 <ion-button>Voir CV</ion-button>
-<ion-button>Voir <br>lettre de motivation</p></ion-button>
+    </ion-col>
+
+    <ion-col>
+      <ion-button>Voir lettre de motivation</ion-button>
+    </ion-col>
+</ion-row>
+
+</ion-grid>
+
 </ion-content>
