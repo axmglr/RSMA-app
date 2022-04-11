@@ -2,23 +2,25 @@
 <ion-content [fullscreen]="true">
 
   <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
-   <ion-menu side="start" menuId="first" contentId="main">
-     <ion-header>
-       <ion-toolbar color="primary">
-         <ion-title>Menu</ion-title>
-       </ion-toolbar>
-     </ion-header>
-     <ion-content>
-       <ion-list>
-         <ion-item>Accueil</ion-item>
-         <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
-         <ion-item>Espace entreprises et partenaires</ion-item>
-         <ion-item>S'engager au RSMA</ion-item>
-         <ion-item>Nous contacter</ion-item>
-       </ion-list>
-       <ion-router-outlet id="main"></ion-router-outlet>
-     </ion-content>
-   </ion-menu>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Accueil</ion-item>
+        <ion-button fill="clear" href="/profil"><ion-item>Mon profil</ion-item></ion-button>
+        <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
+        <ion-item>Espace entreprises et partenaires</ion-item>
+        <ion-item>S'engager au RSMA</ion-item>
+        <ion-button fill="clear" href="/contact"><ion-item>Nous contacter</ion-item></ion-button>
+        
+      </ion-list>
+      <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-content>
+  </ion-menu>
    
     <center><img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
 
@@ -27,11 +29,16 @@
     <ion-text><h5><ion-icon name="location-outline"></ion-icon>Camp NEMO BP 246
     97393 Saint-Laurent du Maroni Cedex</h5> </ion-text>
 
+    <ion-text><h5><ion-icon name="location-outline"></ion-icon>Camp du Tigre
+Quartier Félix EBOUE BP 7012
+97307 Cayenne Cedex</h5></ion-text>
+
    <ion-text><h5><ion-icon name="mail-outline"></ion-icon>rsmaguyane@hotmail.fr</h5> </ion-text>
 
-   <ion-text><h5><ion-icon name="call-outline"></ion-icon> appel telephonique	S'engager au RSMA : 06 94 24 18 27
-    ou 06 94 44 08 27
+   <ion-text><h5><ion-icon name="call-outline"></ion-icon>S'engager au RSMA : 06 94 24 18 27
+    ou<br> 06 94 44 08 27<br>
      Recruter un volontaire issu du RSMA
     : 06 94 20 35 56 ou 06 94 20 99 29</h5>
 </ion-text> 
+
 </ion-content>
