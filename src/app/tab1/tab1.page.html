@@ -1,25 +1,7 @@
 
 <ion-content [fullscreen]="true">
      
-    <ion-menu side="start" menuId="first" contentId="main">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-item>Accueil</ion-item>
-          <ion-button fill="clear" href="/profil"><ion-item>Mon profil</ion-item></ion-button>
-          <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
-          <ion-item>Espace entreprises et partenaires</ion-item>
-          <ion-item>S'engager au RSMA</ion-item>
-          <ion-button fill="clear" href="/contact"><ion-item>Nous contacter</ion-item></ion-button>
-          
-        </ion-list>
-        <ion-router-outlet id="main"></ion-router-outlet>
-      </ion-content>
-    </ion-menu>
+    
 
 <ion-grid>
 
@@ -47,10 +29,34 @@
 
 <img src="https://www.rsmaguyane.fr/images/silde_1/Sans_titre17.jpg">
 
-<ion-button href="/formations" expand="block">NOS FORMATIONS</ion-button>
-<ion-button href="/contact" expand="block">NOUS CONTACTER</ion-button>
-<ion-button expand="block">ENTREPRISE</ion-button>
+<center>
+<ion-button expand="block" href="/formations" >NOS FORMATIONS</ion-button><br>
+<ion-button expand="block" href="/contact">NOUS CONTACTER</ion-button><br>
+<ion-button expand="block">ENTREPRISES ET PARTENAIRES</ion-button>
+</center>
 
-<img src="https://www.rsmaguyane.fr/images/logos/rsma-guyane-europe.JPG">
+
+    <img src="https://www.rsmaguyane.fr/images/logos/rsma-guyane-europe.JPG">
+
+
 </ion-content>
 
+<ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Accueil</ion-item>
+          <ion-button fill="clear" href="/profil"><ion-item>Mon profil</ion-item></ion-button>
+          <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
+          <ion-item>Espace entreprises et partenaires</ion-item>
+          <ion-item>S'engager au RSMA</ion-item>
+          <ion-button fill="clear" href="/contact"><ion-item>Nous contacter</ion-item></ion-button>
+          
+        </ion-list>
+        <ion-router-outlet id="main"></ion-router-outlet>
+      </ion-content>
+    </ion-menu>

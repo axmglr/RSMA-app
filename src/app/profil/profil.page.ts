@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.page.html',
   styleUrls: ['./profil.page.scss'],
 })
-export class ProfilPage implements OnInit {
+export class ProfilPage  {
 
-  constructor() { }
+  constructor(private menu: MenuController) {}
 
-  ngOnInit() {
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
 
 }

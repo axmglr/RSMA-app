@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-fiche-formation',
   templateUrl: './fiche-formation.page.html',
   styleUrls: ['./fiche-formation.page.scss'],
 })
-export class FicheFormationPage implements OnInit {
+export class FicheFormationPage {
 
-  constructor() { }
+  constructor(private menu: MenuController) {}
 
-  ngOnInit() {
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
 
 }

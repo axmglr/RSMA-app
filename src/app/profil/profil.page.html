@@ -1,8 +1,6 @@
-<ion-content><ion-header>
+<ion-content>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col> 
+  
 
   <ion-menu side="start" menuId="first" contentId="main">
     <ion-header>
@@ -12,7 +10,7 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Accueil</ion-item>
+        <ion-button fill="clear" href="/tabs/tab1"><ion-item>Accueil</ion-item></ion-button>
         <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
         <ion-item>Espace entreprises et partenaires</ion-item>
         <ion-item>S'engager au RSMA</ion-item>
@@ -24,16 +22,9 @@
 
 
 <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
-</ion-col>
 
-  <ion-col>
   <center><img id="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
-  </ion-col>
 
-  <ion-col></ion-col>
-</ion-row>
-  </ion-grid>
-</ion-header>
 
 <center><ion-text><h1>Profil du volontaire</h1></ion-text></center>
 
