@@ -3,8 +3,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path:'',
+    redirectTo: "home",
+    pathMatch:"full"
   },
   {
     path: 'contact',
@@ -25,6 +26,22 @@ const routes: Routes = [
   {
     path: 'fiche-de-renseignement',
     loadChildren: () => import('./fiche-de-renseignement/fiche-de-renseignement.module').then( m => m.FicheDeRenseignementPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'connexion',
+    loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
+  },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'volontaires',
+    loadChildren: () => import('./volontaires/volontaires.module').then( m => m.VolontairesPageModule)
   }
 
 ];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab1',
@@ -8,9 +8,6 @@ import { MenuController } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  constructor(private menu: MenuController) {}
+  constructor() {}
 
-openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }}
+}
