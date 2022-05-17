@@ -134,6 +134,14 @@ const routes: Routes = [
   {
     path: 'froid',
     loadChildren: () => import('./froid/froid.module').then( m => m.FroidPageModule)
+  },
+  {
+    path: 'cv',
+    loadChildren: () => import('./cv/cv.module').then( m => m.CvPageModule)
+  },
+  {
+    path: 'ldm',
+    loadChildren: () => import('./ldm/ldm.module').then( m => m.LdmPageModule)
   }
 
 ];
