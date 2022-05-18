@@ -142,6 +142,10 @@ const routes: Routes = [
   {
     path: 'ldm',
     loadChildren: () => import('./ldm/ldm.module').then( m => m.LdmPageModule)
+  },
+  {
+    path: 'entreprises',
+    loadChildren: () => import('./entreprises/entreprises.module').then( m => m.EntreprisesPageModule)
   }
 
 ];
