@@ -14,25 +14,38 @@
         <ion-item>Espace entreprises et partenaires</ion-item>
         <ion-item>S'engager au RSMA</ion-item>
         <ion-button fill="clear" routerLink="/contact"><ion-item>Nous contacter</ion-item></ion-button>
-        </ion-list>
+        
+      </ion-list>
       <ion-router-outlet id="main"></ion-router-outlet>
     </ion-content>
   </ion-menu>
 
 <ion-grid>
+
 <ion-row>
 <ion-col>
   <ion-row>
  <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
  </ion-row> 
 </ion-col>
-<ion-col>
- <div>
-<img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg">
+  <ion-col>
+    <div>
+      <img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg">
+    </div>
+  </ion-col>
+  <ion-col>
+    <div>
+      
+      <ion-button fill="clear" routerLink="/connexion"><ion-icon name="person-circle-outline"></ion-icon></ion-button>
+    
     </div>
   </ion-col>
 </ion-row>  
 </ion-grid>
+
+
+<center><ion-text><h1>Liste des volontaires Disponible</h1></ion-text></center> 
+
 
   <ion-card>
     <ion-card-header>
