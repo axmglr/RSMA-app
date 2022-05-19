@@ -146,6 +146,10 @@ const routes: Routes = [
   {
     path: 'entreprises',
     loadChildren: () => import('./entreprises/entreprises.module').then( m => m.EntreprisesPageModule)
+  },
+  {
+    path: 'd-web1',
+    loadChildren: () => import('./d-web1/d-web1.module').then( m => m.DWeb1PageModule)
   }
 
 ];
