@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inscription',
@@ -8,27 +9,31 @@ import { Router } from '@angular/router';
 })
 export class InscriptionPage implements OnInit {
 
-  userName
+  prenom
+  nom
   email
   mdp
   remdp
   token
 
-  constructor(private router: Router) { }
+
+  constructor( private alertCtrl:AlertController,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
   inscription(){
     console.log(this.email, this.mdp)
-   console.log(this.remdp, this.userName)
+   console.log(this.nom, this.prenom)
     var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   
   var raw = JSON.stringify({
-    "username": this.userName,
+    "username": this.prenom,
     "email": this.email,
-    "password": this.mdp
+    "password": this.mdp,
+    "LastName": this.nom
   });
   
   var requestOptions = {
@@ -42,14 +47,40 @@ export class InscriptionPage implements OnInit {
     .then((result) => {console.log(result)
     this.token = result
   if (this.token.jwt){
-    this.navigate()
-  }
-  })
-    .catch(error => console.log('error', error));
-  }
   
-  navigate(){
-    this.router.navigate(['/home'])
+  this.showAlert()
+}
+else{
+  this.showAlertfaux()
+}
+  })
+    .catch(error => console.log('error', error),
+    );
   }
 
+  
+async showAlert() {
+  this.router.navigate(['/home'])
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: 'Inscription réussite !',
+      subHeader: '',
+      message: 'Nous vous contacterons dans les plus brefs délais.',
+      buttons: ['Ok']
+     });
+
+    await alert.present();
+  }
+
+  async showAlertfaux() {
+      const alert = await this.alertCtrl.create({
+        cssClass: 'my-custom-class',
+        header: 'Echec de l\'inscription',
+        subHeader: '',
+        message: 'Il semble que quelque chose ce soit mal passé.',
+        buttons: ['Réessayer']
+       });
+  
+      await alert.present();
+    }
 }
