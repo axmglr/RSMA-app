@@ -57,6 +57,10 @@ const routes: Routes = [
     path: 'entreprises',
     loadChildren: () => import('./entreprises/entreprises.module').then( m => m.EntreprisesPageModule)
   },
+  {
+    path: 'docafournir',
+    loadChildren: () => import('./docafournir/docafournir.module').then( m => m.DocafournirPageModule)
+  },
 
 
 ];
