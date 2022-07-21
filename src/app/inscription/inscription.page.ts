@@ -9,10 +9,10 @@ import { AlertController } from '@ionic/angular';
 })
 export class InscriptionPage implements OnInit {
 
-  prenom
-  nom
+  username
+  LastName
   email
-  mdp
+  password
   remdp
   token
 
@@ -24,16 +24,16 @@ export class InscriptionPage implements OnInit {
   }
 
   inscription(){
-    console.log(this.email, this.mdp)
-   console.log(this.nom, this.prenom)
+    console.log(this.email, this.password)
+   console.log(this.LastName, this.username)
     var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   
   var raw = JSON.stringify({
-    "username": this.prenom,
+    "username": this.username,
     "email": this.email,
-    "password": this.mdp,
-    "LastName": this.nom
+    "password": this.password,
+    "LastName": this.LastName
   });
   
   var requestOptions = {

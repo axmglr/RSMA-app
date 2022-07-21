@@ -1,66 +1,73 @@
-<ion-header>
-  <center><img id="rsma" src ="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
-<center><ion-text><h1>Formulaire</h1></ion-text></center>
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <center><img id="rsma" src="https://i.ibb.co/vkdQ62L/LOGO-BASELINE-RSMA-removebg-preview.png%22%3E"></center>
+  </ion-toolbar>
 </ion-header>
+
+<ion-content>
+
   <form name="mon-formulaire1" action="page-envoi.html" method="get">
 
-    
     <center>
+
       <ion-item>
-      <ion-label>Sexe</ion-label>
-      <ion-select placeholder="Selectionnez">
-        <ion-select-option value="f">Femme</ion-select-option>
-        <ion-select-option value="m">Homme</ion-select-option>
-      </ion-select>
-    </ion-item>
-    
-    <ion-item>
-    <ion-label position="stacked">Nom</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-label position="stacked">Prénom</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+        <ion-label position="stacked">
+          <h2>Être de nationalité française</h2>
+        </ion-label>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Adresse</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label>Sexe</ion-label>
+        <ion-select placeholder="Selectionnez">
+          <ion-select-option value="f">Femme</ion-select-option>
+          <ion-select-option value="m">Homme</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked" >Code Postal</ion-label>
-    <ion-input type="number"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Date de naissance:</ion-label>
-    <ion-input type="date" id="start" name="trip-start"
-    value="2022-07-22"
-    min="1980-01-01" max="2030-12-31"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Prénom</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Date de naissance:</ion-label>
+        <ion-input type="date" id="start" name="trip-start" value="2022-07-22" min="1980-01-01" max="2030-12-31">
+        </ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Mail:</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Adresse</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
-  <label for="telNo">téléphone :</label>
-<input id="telNo" name="telNo" type="tel">
+      <ion-item>
+        <ion-label position="stacked">Code Postal</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
-<label for="avatar">Fichier à Envoyer</label>
 
-<input type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg">
+      <ion-item>
+        <ion-label position="stacked">Adresse e-mail</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
 
-  <p>
-    <ion-button expand="block">Envoyer</ion-button>
-     <ion-button expand="block">Annuler</ion-button>
-  </p></center>
+      <ion-item>
+        <ion-label position="stacked">Numéro de mobile</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-button routerLink="/home" expand="block" (click)="showAlert()">ENVOYER
+      </ion-button>
+      <ion-button expand="block" routerLink="/home">ANNULER</ion-button>
+    </center>
   </form>
- 
-
-
+</ion-content>
 
