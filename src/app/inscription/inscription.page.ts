@@ -10,77 +10,82 @@ import { AlertController } from '@ionic/angular';
 export class InscriptionPage implements OnInit {
 
   username
-  LastName
   email
   password
   remdp
   token
+  firstname
 
 
-  constructor( private alertCtrl:AlertController,
+  constructor(private alertCtrl: AlertController,
     private router: Router) { }
 
   ngOnInit() {
   }
 
-  inscription(){
+  inscription() {
     console.log(this.email, this.password)
-   console.log(this.LastName, this.username)
+    console.log(this.firstname, this.username)
     var myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  
-  var raw = JSON.stringify({
-    "username": this.username,
-    "email": this.email,
-    "password": this.password,
-    "LastName": this.LastName
-  });
-  
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-  };
-  
-  fetch("http://localhost:1337/api/auth/local/register", requestOptions)
-    .then(response => response.json())
-    .then((result) => {console.log(result)
-    this.token = result
-  if (this.token.jwt){
-  
-  this.showAlert()
-}
-else{
-  this.showAlertfaux()
-}
-  })
-    .catch(error => console.log('error', error),
-    );
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      "username": this.username,
+      "email": this.email,
+      "password": this.password,
+      "firstName": this.firstname
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+    };
+
+    fetch("http://localhost:1337/api/auth/local/register", requestOptions)
+      .then(response => response.json())
+      .then((result) => {
+        console.log(result)
+        this.token = result
+        if (this.token.jwt) {
+
+          this.showAlert()
+        }
+        else {
+          this.showAlertfaux()
+        }
+      })
+      .catch(error => console.log('error', error),
+      );
   }
 
-  
-async showAlert() {
-  this.router.navigate(['/home'])
+
+  async showAlert() {
+    this.router.navigate(['/home'])
     const alert = await this.alertCtrl.create({
       cssClass: 'my-custom-class',
       header: 'Inscription réussite !',
       subHeader: '',
       message: 'Nous vous contacterons dans les plus brefs délais.',
       buttons: ['Ok']
-     });
+    });
 
     await alert.present();
   }
 
   async showAlertfaux() {
-      const alert = await this.alertCtrl.create({
-        cssClass: 'my-custom-class',
-        header: 'Echec de l\'inscription',
-        subHeader: '',
-        message: 'Il semble que quelque chose ce soit mal passé.',
-        buttons: ['Réessayer']
-       });
-  
-      await alert.present();
-    }
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: 'Echec de l\'inscription',
+      subHeader: '',
+      message: 'Il semble que quelque chose ce soit mal passé.',
+      buttons: ['Réessayer']
+    });
+
+    await alert.present();
+  }
+  back() {
+    this.router.navigate(['/connexion'])
+  }
+
 }

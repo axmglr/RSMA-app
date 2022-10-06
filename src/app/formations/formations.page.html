@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-button fill="clear" (click)=(openFirst())> <ion-icon name="menu-outline"></ion-icon></ion-button>
-    <center><img id ="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg"></center>
+    <ion-button fill="clear" (click)=(openFirst())>
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-button>
+    <img id="rsma" src="https://www.rsmaguyane.fr/images/LOGO_BASELINE_RSMA.jpg">
   </ion-toolbar>
 </ion-header>
 
@@ -15,12 +17,18 @@
   <ion-content>
     <ion-list>
       <ion-item>Accueil</ion-item>
-      <ion-button fill="clear" href="/profil"><ion-item>Mon profil</ion-item></ion-button>
-      <ion-button fill="clear" href="/formations"><ion-item>Nos formations</ion-item></ion-button>
+      <ion-button fill="clear" href="/profil">
+        <ion-item>Mon profil</ion-item>
+      </ion-button>
+      <ion-button fill="clear" href="/formations">
+        <ion-item>Nos formations</ion-item>
+      </ion-button>
       <ion-item>Espace entreprises et partenaires</ion-item>
       <ion-item>S'engager au RSMA</ion-item>
-      <ion-button fill="clear" href="/contact"><ion-item>Nous contacter</ion-item></ion-button>
-      
+      <ion-button fill="clear" href="/contact">
+        <ion-item>Nous contacter</ion-item>
+      </ion-button>
+
     </ion-list>
     <ion-router-outlet id="main"></ion-router-outlet>
   </ion-content>
@@ -33,7 +41,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <center>Le régiment a la volonté de répondre aux besoins des entreprises du territoire et fait évoluer ses formations.</center> 
+  <h1></h1>Le régiment a la volonté de répondre aux besoins des entreprises du territoire et fait évoluer ses
+  formations.
 
-  <ion-button routerLink="/d-web" expand="block">Développeur web</ion-button>
-  <ion-button expand="block">Maçon</ion-button>
+  <div *ngFor="let formation of listFormation">
+    <ion-button expand="block" (click)="goFormation(formation.id)">{{formation.attributes.nom}}</ion-button>
+  </div>
+  <ion-button id="retour" href="http://localhost:4200/home"> Retour </ion-button>

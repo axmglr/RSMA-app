@@ -1,8 +1,29 @@
-#rsma{width: 94px;
-    height: 45px;}
+#rsma {
+    width: 94px;
+    height: 45px;
+    display: flex;
+    margin-left: 15em;
 
-    #rsma{width: 94px;
-        height: 45px;}
-    
-        ion-button{--ion-color-primary:rgb(15, 30, 80);
-        size: small;}
+}
+
+
+
+
+
+
+ion-button {
+    --ion-color-primary: rgb(15, 30, 80);
+    size: small;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+
+}
+
+img {
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}

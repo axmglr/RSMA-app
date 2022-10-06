@@ -1,13 +1,28 @@
-#rsma{width: 94px;
-    height: 45px;}
-    
-    ion-button{--ion-color-primary:rgb(15, 30, 80);
-    size: small;}
-    
-     ion-menu{z-index: 10;}
+#rsma {
+    width: 94px;
+    height: 45px;
+}
 
-     #rsma{width: 94px;
-        height: 45px;}
-    
-        ion-button{--ion-color-primary:rgb(15, 30, 80);
-        size: small;}
+ion-button {
+    --ion-color-primary: rgb(15, 30, 80);
+    size: small;
+}
+
+ion-menu {
+    z-index: 10;
+}
+
+#rsma {
+    width: 94px;
+    height: 45px;
+}
+
+ion-button {
+    --ion-color-primary: rgb(15, 30, 80);
+    size: small;
+}
+
+#retour {
+    display: block;
+    margin: auto
+}

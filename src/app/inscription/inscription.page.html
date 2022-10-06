@@ -1,16 +1,15 @@
-
 <ion-content>
   <ion-card>
-    <ion-card-header> 
+    <ion-card-header>
       <ion-card-title>Inscription</ion-card-title>
       <ion-card-subtitle>Bienvenue</ion-card-subtitle>
-     
+
     </ion-card-header>
-  
+
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</ion-label>
-        <ion-input type="text" [(ngModel)]="LastName"></ion-input>
+        <ion-label position="floating">NOM</ion-label>
+        <ion-input type="text" [(ngModel)]="firstname"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -18,7 +17,7 @@
         <ion-input type="text" [(ngModel)]="username"></ion-input>
       </ion-item>
 
-      
+
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input type="email" [(ngModel)]="email"></ion-input>
@@ -34,10 +33,12 @@
         <ion-input type="password" [(ngModel)]="remdp"></ion-input>
       </ion-item>
 
-      
+
     </ion-card-content>
-  <center><ion-button expand="block" disabled="false" (click)="inscription()">Inscription</ion-button> </center> 
+    <center>
+      <ion-button expand="block" disabled="false" (click)="inscription()">Inscription</ion-button>
+      <ion-button expand="block" disabled="false" (click)="back()">retour</ion-button>
+    </center>
   </ion-card>
 
 </ion-content>
-
